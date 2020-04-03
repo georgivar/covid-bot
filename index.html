@@ -1,1 +1,33 @@
 <h1>Hello</h1>
+
+<script src="https://web-chat.nativechat.com/2.6.3/sdk/nativechat.js"></script>
+    <link href="https://web-chat.nativechat.com/2.6.3/sdk/nativechat.css" rel="stylesheet" type="text/css">
+    <div id="ID-of-the-element-that-contains-the-chat-widget"></div>
+    <script>
+  var chatSettings = {
+    bot: {
+      id: "86c422a116df4f038724f13b"
+    },
+    channel: {
+      id: "0db52d8d-389a-4ad2-b6ea-e299b66f3e7c",
+      token: "0bc3f732-2d7b-466b-88bc-9b8d68addfdb"
+    },
+    googleApiKey: "your-google-maps-API-key",
+    session: {
+      clear: true
+    }
+  };
+
+  const load = () => {
+      window.NativeChat.load({
+      id: "kcChatWindow",
+      origin: "",
+      display: {
+        mode: "inline",
+        containerId: "ID-of-the-element-that-contains-the-chat-widget"
+      },
+      chat: chatSettings
+    });
+  };
+  window.onload = load;
+</script>
