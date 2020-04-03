@@ -1,8 +1,25 @@
-<h1>Hello</h1>
+<!doctype html>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <title>NativeChat COVID-19 Triage Sample Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        
+        #chat { width: 500px; height: 600px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,.2); }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Nativechat COVID-19 Triage Bot Sample</h1>
 <script src="https://web-chat.nativechat.com/2.6.3/sdk/nativechat.js"></script>
     <link href="https://web-chat.nativechat.com/2.6.3/sdk/nativechat.css" rel="stylesheet" type="text/css">
-    <div id="ID-of-the-element-that-contains-the-chat-widget"></div>
+    <div id="chat"></div>
     <script>
   var chatSettings = {
     bot: {
@@ -24,10 +41,12 @@
       origin: "",
       display: {
         mode: "inline",
-        containerId: "ID-of-the-element-that-contains-the-chat-widget"
+        containerId: "chat"
       },
       chat: chatSettings
     });
   };
   window.onload = load;
 </script>
+</body>
+</html>
